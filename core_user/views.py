@@ -30,7 +30,7 @@ class UserManagementView(viewsets.GenericViewSet, mixins.ListModelMixin,
         id = int(request.GET.get('id'))
         instance = Profile.objects.filter(pk=id)
         if(len(instance)>0):
-            instance = instance[0]
+            instance = instance[0].auth
             instance.is_active = not instance.is_active
             instance.save()
             return Response(status=status.HTTP_200_OK)
