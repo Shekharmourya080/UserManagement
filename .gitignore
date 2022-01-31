@@ -1,2 +1,6 @@
 .idea
 .idea/
+images
+images/
+core_user/migrations/__pycache__/
+core_user/__pycache__/

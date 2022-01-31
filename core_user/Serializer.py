@@ -23,7 +23,7 @@ class UserManagementSerializer(serializers.ModelSerializer):
     contact = serializers.IntegerField(required=True,validators=[RegexValidator(regex='^[0-9]{10}$',message='Please enter valid contact number')])
     class Meta:
         model = Profile
-        fields = ('user_id','auth','gender','city','country','contact')
+        fields = ('user_id','auth','gender','city','country','contact','image')
 
     def create(self, validated_data):
         user_data = validated_data.pop('auth')

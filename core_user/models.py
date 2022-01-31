@@ -8,11 +8,16 @@ class Profile(models.Model):
     city = models.CharField(max_length=100, db_column='city')
     country = models.CharField(max_length=100, db_column='country')
     auth = models.OneToOneField(to=User, on_delete=models.CASCADE, null=True, db_column='auth_id')
-    contact = models.BigIntegerField(max_length=10)
+    contact = models.BigIntegerField()
+    image = models.ImageField(upload_to='images',null=True)
     objects = models.Manager()
 
     class Meta:
         db_table = 'profile'
+
+
+
+
 
 
 
