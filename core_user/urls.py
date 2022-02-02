@@ -8,5 +8,6 @@ router.register('', viewset=views.UserManagementView)
 app_name = 'core_user'
 
 urlpatterns = [
-    path('',include(router.urls))
+    path('',include(router.urls)),
+    # path('images/<str:path>/',views.UserManagementView.download_image)
 ]
