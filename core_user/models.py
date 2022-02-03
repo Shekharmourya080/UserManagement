@@ -16,6 +16,10 @@ class Profile(models.Model):
 
     class Meta:
         db_table = 'profile'
+        permissions=(
+            ('manage_user','Can Create User'),
+            ('view_user','Can view user')
+        )
 
 
 
